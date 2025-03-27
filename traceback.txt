@@ -1,78 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While processing text tag {'_call__enter_game_menu_2', '_call__enter_game_menu_3', '_call__enter_game_menu_0', '_call__enter_game_menu_1', '_errorhandling', '_return_skipping', '_save_reload_game', '_load_reload_game', '_quit_prompt', '_start_store', 'main_menu_screen', '_game_menu', '_start', '_main_menu', '_quit', '_main_menu_screen', 'preferences_screen', '_persistent_viewer', '_image_location_picker', '_noisy_return', '_renpy_return', '_main_menu_prompt', '_image_location_picker_done', '_game_menu_load', '_enter_game_menu', '_after_warp', '_call_splashscreen_1', '_after_load', '_game_menu_save', '_style_reset', 'save_screen', '_confirm_quit', '_return', '_filename_list', 'joystick_preferences_screen', '_start_replay', '_variable_viewer', '_return_fast_skipping', '_invoke_main_menu', '_call_enter_game_menu_1', '_console_return', '_choose_renderer', '_image_attributes', '_hide_windows', '_console', 'subroutine', '_call__load_reload_game_1', '_splashscreen', '_game_menu_preferences', 'start', '_gl_test', 'load_screen', '_developer'} in "The labels are: RevertableSet({'_call__enter_game_menu_2', '_call__enter_game_menu_3', '_call__enter_game_menu_0', '_call__enter_game_menu_1', '_errorhandling', '_return_skipping', '_save_reload_game', '_load_reload_game', '_quit_prompt', '_start_store', 'main_menu_screen', '_game_menu', '_start', '_main_menu', '_quit', '_main_menu_screen', 'preferences_screen', '_persistent_viewer', '_image_location_picker', '_noisy_return', '_renpy_return', '_main_menu_prompt', '_image_location_picker_done', '_game_menu_load', '_enter_game_menu', '_after_warp', '_call_splashscreen_1', '_after_load', '_game_menu_save', '_style_reset', 'save_screen', '_confirm_quit', '_return', '_filename_list', 'joystick_preferences_screen', '_start_replay', '_variable_viewer', '_return_fast_skipping', '_invoke_main_menu', '_call_enter_game_menu_1', '_console_return', '_choose_renderer', '_image_attributes', '_hide_windows', '_console', 'subroutine', '_call__load_reload_game_1', '_splashscreen', '_game_menu_preferences', 'start', '_gl_test', 'load_screen', '_developer'})".:
-  File "game/script.rpy", line 23, in script call
-    call subroutine
-  File "game/script.rpy", line 37, in script
-    e "The labels are: [labels]"
-Exception: Unknown text tag "'_call__enter_game_menu_2', '_call__enter_game_menu_3', '_call__enter_game_menu_0', '_call__enter_game_menu_1', '_errorhandling', '_return_skipping', '_save_reload_game', '_load_reload_game', '_quit_prompt', '_start_store', 'main_menu_screen', '_game_menu', '_start', '_main_menu', '_quit', '_main_menu_screen', 'preferences_screen', '_persistent_viewer', '_image_location_picker', '_noisy_return', '_renpy_return', '_main_menu_prompt', '_image_location_picker_done', '_game_menu_load', '_enter_game_menu', '_after_warp', '_call_splashscreen_1', '_after_load', '_game_menu_save', '_style_reset', 'save_screen', '_confirm_quit', '_return', '_filename_list', 'joystick_preferences_screen', '_start_replay', '_variable_viewer', '_return_fast_skipping', '_invoke_main_menu', '_call_enter_game_menu_1', '_console_return', '_choose_renderer', '_image_attributes', '_hide_windows', '_console', 'subroutine', '_call__load_reload_game_1', '_splashscreen', '_game_menu_preferences', 'start', '_gl_test', 'load_screen', '_developer'"
+After initialization, but before game start.
+PermissionError: [WinError 32] プロセスはファイルにアクセスできません。別のプロセスが使用中です。: 'C:\\Users\\tamon\\Desktop\\RenPyProject\\risa_p1\\game\\saves\\navigation.json.new' -> 'C:\\Users\\tamon\\Desktop\\RenPyProject\\risa_p1\\game\\saves\\navigation.json'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 23, in script call
-    call subroutine
-  File "game/script.rpy", line 37, in script
-    e "The labels are: [labels]"
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\ast.py", line 2573, in execute
-    Say.execute(self)
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\exports\sayexports.py", line 132, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\character.py", line 1455, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\character.py", line 1106, in do_display
-    display_say(who,
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\character.py", line 803, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\display\core.py", line 2215, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\display\core.py", line 2879, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\display\core.py", line 1381, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 486, in renpy.display.render.render_screen
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\display\layout.py", line 903, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\display\layout.py", line 903, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\display\layout.py", line 903, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\display\screen.py", line 754, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\display\layout.py", line 903, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\display\layout.py", line 1454, in render
-    surf = render(child,
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\display\layout.py", line 903, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\text\text.py", line 2540, in render
-    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\text\text.py", line 733, in __init__
-    self.paragraphs = self.segment(text.tokens, style, renders, text)
-  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\text\text.py", line 1529, in segment
-    raise Exception("Unknown text tag %r" % text)
-Exception: Unknown text tag "'_call__enter_game_menu_2', '_call__enter_game_menu_3', '_call__enter_game_menu_0', '_call__enter_game_menu_1', '_errorhandling', '_return_skipping', '_save_reload_game', '_load_reload_game', '_quit_prompt', '_start_store', 'main_menu_screen', '_game_menu', '_start', '_main_menu', '_quit', '_main_menu_screen', 'preferences_screen', '_persistent_viewer', '_image_location_picker', '_noisy_return', '_renpy_return', '_main_menu_prompt', '_image_location_picker_done', '_game_menu_load', '_enter_game_menu', '_after_warp', '_call_splashscreen_1', '_after_load', '_game_menu_save', '_style_reset', 'save_screen', '_confirm_quit', '_return', '_filename_list', 'joystick_preferences_screen', '_start_replay', '_variable_viewer', '_return_fast_skipping', '_invoke_main_menu', '_call_enter_game_menu_1', '_console_return', '_choose_renderer', '_image_attributes', '_hide_windows', '_console', 'subroutine', '_call__load_reload_game_1', '_splashscreen', '_game_menu_preferences', 'start', '_gl_test', 'load_screen', '_developer'"
+  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\main.py", line 599, in main
+    renpy.dump.dump(False)
+  File "C:\Users\tamon\Downloads\renpy-8.3.1-sdk\renpy\dump.py", line 262, in dump
+    os.rename(new, filename)
+PermissionError: [WinError 32] プロセスはファイルにアクセスできません。別のプロセスが使用中です。: 'C:\\Users\\tamon\\Desktop\\RenPyProject\\risa_p1\\game\\saves\\navigation.json.new' -> 'C:\\Users\\tamon\\Desktop\\RenPyProject\\risa_p1\\game\\saves\\navigation.json'
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.1.24090601
 risa_p1 1.0
-Mon Mar 24 20:18:11 2025
+Thu Mar 27 20:31:30 2025
